@@ -1,66 +1,66 @@
-# Desafío de los Cubos de Agua
+# Water Bucket Challenge
 
-## Descripción del Proyecto
+## Project Description
 
-Este proyecto implementa una solución interactiva al clásico problema de los "Cubos de Agua" (Water Jug Challenge). El desafío consiste en medir exactamente Z galones de agua utilizando únicamente dos cubos con capacidades X e Y, donde solo se permiten las operaciones de llenar, vaciar y transferir agua entre los cubos.
+This project implements an interactive solution to the classic "Water Bucket Challenge". The challenge consists of measuring exactly Z gallons of water using only two buckets with capacities X and Y, where only the operations of filling, emptying, and transferring water between buckets are allowed.
 
-## Características
+## Features
 
-- Visualización interactiva del estado de los cubos en cada paso
-- Navegación paso a paso a través de la solución
-- Detección automática de casos sin solución
-- Algoritmo optimizado para encontrar la solución más eficiente
+- Interactive visualization of bucket states at each step
+- Step-by-step navigation through the solution
+- Automatic detection of unsolvable cases
+- Optimized algorithm to find the most efficient solution
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript 
 - Bootstrap 5
 
-## Enfoque Algorítmico
+## Algorithmic Approach
 
-El algoritmo utiliza una búsqueda en amplitud (BFS - Breadth-First Search) para encontrar la solución más eficiente al problema. Este enfoque garantiza que la primera solución encontrada será la que requiera el menor número de pasos.
+The algorithm uses a Breadth-First Search (BFS) to find the most efficient solution to the problem. This approach guarantees that the first solution found will be the one requiring the least number of steps.
 
-El algoritmo funciona de la siguiente manera:
+The algorithm works as follows:
 
-1. Comienza con ambos cubos vacíos.
-2. Explora todas las posibles acciones en cada estado (llenar, vaciar, transferir).
-3. Mantiene un registro de los estados ya visitados para evitar ciclos infinitos.
-4. Cuando encuentra un estado donde uno de los cubos contiene exactamente Z galones, reconstruye la secuencia de pasos que llevaron a ese estado.
+1. Starts with both buckets empty.
+2. Explores all possible actions in each state (fill, empty, transfer).
+3. Maintains a record of visited states to avoid infinite cycles.
+4. When it finds a state where one of the buckets contains exactly Z gallons, it reconstructs the sequence of steps that led to that state.
 
-La complejidad temporal del algoritmo es O(X * Y), donde X e Y son las capacidades de los cubos, ya que en el peor caso necesitaríamos explorar todos los posibles estados de llenado de ambos cubos.
+The time complexity of the algorithm is O(X * Y), where X and Y are the bucket capacities, as in the worst case we would need to explore all possible filling states of both buckets.
 
-## Cómo Usar
+## How to Use
 
-1. Abra el archivo `index.html` en su navegador web.
-2. Ingrese las capacidades de los cubos (X e Y) y la cantidad objetivo (Z).
-3. Haga clic en "Resolver" para encontrar la solución.
-4. Utilice los botones "Anterior" y "Siguiente" para navegar a través de los pasos de la solución.
-5. Observe la visualización de los cubos y la descripción de cada acción.
+1. Open the `index.html` file in your web browser.
+2. Enter the bucket capacities (X and Y) and the target amount (Z).
+3. Click "Solve" to find the solution.
+4. Use the "Previous" and "Next" buttons to navigate through the solution steps.
+5. Observe the bucket visualization and description of each action.
 
-## Casos de Prueba
+## Test Cases
 
-### Caso 1: Solución Simple
-- Cubo X: 2
-- Cubo Y: 10
-- Objetivo Z: 4
-- Resultado Esperado: Solución encontrada en 4 pasos
+### Case 1: Simple Solution
+- Bucket X: 2
+- Bucket Y: 10
+- Target Z: 4
+- Expected Result: Solution found in 4 steps
 
-### Caso 2: Solución Eficiente
-- Cubo X: 2
-- Cubo Y: 100
-- Objetivo Z: 96
-- Resultado Esperado: Solución encontrada en 4 pasos
+### Case 2: Efficient Solution
+- Bucket X: 2
+- Bucket Y: 100
+- Target Z: 96
+- Expected Result: Solution found in 4 steps
 
-### Caso 3: Sin Solución
-- Cubo X: 2
-- Cubo Y: 6
-- Objetivo Z: 5
-- Resultado Esperado: "No se encontró solución"
+### Case 3: No Solution
+- Bucket X: 2
+- Bucket Y: 6
+- Target Z: 5
+- Expected Result: "No solution found"
 
-## Limitaciones
+## Limitations
 
-- Solo se permiten las acciones de llenar, vaciar y transferir entre los dos cubos.
-- X, Y y Z deben ser números enteros mayores que 0.
-- No se pueden utilizar mediciones parciales o aproximadas.
+- Only filling, emptying, and transferring between the two buckets are allowed.
+- X, Y, and Z must be positive integers greater than 0.
+- Partial or approximate measurements cannot be used.
